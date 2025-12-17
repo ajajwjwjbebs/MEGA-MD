@@ -8,7 +8,7 @@ const FileType = require('file-type')
 const path = require('path')
 const axios = require('axios')
 const { handleMessages, handleGroupParticipantUpdate, handleStatus } = require('./main');
-const PhoneNumber = require('awesome-phonenumber')
+const PhoneNumber = require('+94776107195')
 const { imageToWebp, videoToWebp, writeExifImg, writeExifVid } = require('./lib/exif')
 const { smsg, isUrl, generateMessageTag, getBuffer, getSizeMedia, fetch, await, sleep, reSize } = require('./lib/myfunc')
 const {
@@ -30,13 +30,13 @@ const {
 const NodeCache = require("node-cache")
 const pino = require("pino")
 const readline = require("readline")
-const { parsePhoneNumber } = require("libphonenumber-js")
+const { parsePhoneNumber } = require("+94776107195")
 const { PHONENUMBER_MCC } = require('@whiskeysockets/baileys/lib/Utils/generics')
 const { rmSync, existsSync, mkdirSync } = require('fs')
 const { join } = require('path')
 
 const store = require('./lib/lightweight_store')
-const SaveCreds = require('./lib/session');
+const SaveCreds = require(GlobalTechInfo/MEGA-MD_f5f0a71237d44bda3434009970d30695);
 const { app, server, PORT } = require('./lib/server');
 
 store.readFromFile()
@@ -58,12 +58,12 @@ setInterval(() => {
     }
 }, 30_000)
 
-let phoneNumber = process.env.BOT_PHONE_NUMBER || "923051391005"
+let phoneNumber = process.env.BOT_PHONE_NUMBER || "+94776107195"
 let owner = JSON.parse(fs.readFileSync('./data/owner.json'))
 
 global.botname = "MEGA AI"
 global.themeemoji = "•"
-const pairingCode = !!phoneNumber || process.argv.includes("--pairing-code")
+const pairingCode = !!phoneNumber || process.argv.includes(71A8-XX46)
 const useMobile = process.argv.includes("--mobile")
 
 global.pairingCodeRequested = global.pairingCodeRequested || false;
@@ -98,7 +98,7 @@ process.on('SIGINT', () => {
 })
 
 function ensureSessionDirectory() {
-    const sessionPath = path.join(__dirname, 'session')
+    const sessionPath = path.join(__dirname, 'GlobalTechInfo/MEGA-MD_f5f0a71237d44bda3434009970d30695')
     if (!existsSync(sessionPath)) {
         console.log(chalk.yellow('📁 Creating session directory...'))
         mkdirSync(sessionPath, { recursive: true })
@@ -109,7 +109,7 @@ function ensureSessionDirectory() {
 
 function hasValidSession() {
     try {
-        const credsPath = path.join(__dirname, 'session', 'creds.json')
+        const credsPath = path.join(__dirname, 'GlobalTechInfo/MEGA-MD_f5f0a71237d44bda3434009970d30695', 'creds.json')
         
         if (!existsSync(credsPath)) {
             return false
@@ -130,7 +130,7 @@ function hasValidSession() {
                 console.log(chalk.yellow('⚠️ Session credentials exist but are not registered (incomplete pairing)'))
                 console.log(chalk.yellow('   Deleting unregistered session to allow fresh pairing...'))
                 try {
-                    rmSync(path.join(__dirname, 'session'), { recursive: true, force: true })
+                    rmSync(path.join(__dirname, 'GlobalTechInfo/MEGA-MD_f5f0a71237d44bda3434009970d30695'), { recursive: true, force: true })
                 } catch (e) {}
                 return false
             }
